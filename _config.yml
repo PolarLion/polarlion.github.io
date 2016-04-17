@@ -20,3 +20,4 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 port: 5000
+encode: UTF-8
