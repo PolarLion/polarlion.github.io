@@ -1,14 +1,15 @@
 ---
 layout: post
 title:  "关于 mosesserver 的使用"
+location: 实验室
 date:   2016-04-18 11:14:00 +0800
 categories: jekyll update
 ---
 
 
-无比强大的 moses 开源翻译工具提供了 server 的工作模式，使用方法和参数与 `bin/moses`大致一样，不同之处在于多了关于 server 属性的设置，具体利用“`-help`”参数就可以看到。这里不得不吐槽： moses 的代码和注释写得比文档好到不知哪里去了。
+　　无比强大的 moses 开源翻译工具毫无意外地提供了 server 的工作模式，
+然而 mosesserver 的官方文档 [在这里：mosesserver 官方文档][mosesserver-doc] 完全是文字描述，没有代码，没有demo，有点反人类。（文档中确实提到有perl脚本，但是并没有在源代码里面找到T_T，不禁叫人吐槽 moses 的代码和注释质量远远超过文档），总而言之，想搞定它需要自己动手丰衣足食了。以下为使用 mosesserver 的一个简单的 python 实践......
 
-mosesserver 的官方文档 [在这里：mosesserver 官方文档][mosesserver-doc] 完全是文字描述，没有代码，没有demo，有点反人类。（文档中确实提到有perl脚本，但是并没有在源代码里面找到T_T），总而言之，想搞定他需要自己动手丰衣足食了。
 
 <br /><font color="green">/************************************************** 废话分割线 ***************************************************/</font><br />
 
@@ -54,7 +55,7 @@ data = "<methodCall><methodName>translate</methodName>\
 </methodCall>
 {% endhighlight%}
 
-按照moses官方文档的说法，顶层的 value 节点下的数据结构 struct 可以理解为一个 map，其中 name 为 text 的 member 节点提供希望翻译的内容信息，是必须包含的，下面 name 为 align 的 member 节点表示是否需要返回对齐信息，如果值为 0 或者不包含此 member 则 server端只返回翻译结果而不包含对齐信息。
+　　按照moses官方文档的说法，顶层的 value 节点下的数据结构 struct 可以理解为一个 map，其中 name 为 text 的 member 节点提供希望翻译的内容信息，是必须包含的，下面 name 为 align 的 member 节点表示是否需要返回对齐信息，如果值为 0 或者不包含此 member 则 server端只返回翻译结果而不包含对齐信息。
 
 接下来补完 python 的 demo：
 
@@ -122,7 +123,7 @@ res = response.read()
 </methodResponse>
 {% endhighlight%}
 
-返回的数据格式也是 xml，很长却也显而易见，其中名为 text 的一级 member 节点记录的是翻译结果的信息，名为 align 的一级 member 节点展示的是完整的对齐信息，如果在发送请求时没有包含 align，则返回的结果为：
+　　返回的数据格式也是 xml，很长却也显而易见，其中名为 text 的一级 member 节点记录的是翻译结果的信息，名为 align 的一级 member 节点展示的是完整的对齐信息，如果在发送请求时没有包含 align，则返回的结果为：
 
 {% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
