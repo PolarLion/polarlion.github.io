@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "关于 mosesserver 的使用"
-location: 实验室
+location: 北理的实验室
 date:   2016-04-18 11:14:00 +0800
 categories: jekyll update
 ---
