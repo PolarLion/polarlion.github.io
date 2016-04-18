@@ -2,27 +2,40 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">Polarlion</h2>
+    <h2 class="footer-heading">{{ site.title }}</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li>email</li>
-          <li><a href="mailto:polarlion@qq.com">polarlion@qq.com</a></li>
+          <li>{{ site.title }}</li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          {% if site.weibo_username %}
+          <li>
+            {% include icon-weibo.html username=site.weibo_username %}
+          </li>
+          {% endif %}
+
+          {% if site.github_username %}
+          <li>
+            {% include icon-github.html username=site.github_username %}
+          </li>
+          {% endif %}
+
+          {% if site.twitter_username %}
+          <li>
+            {% include icon-twitter.html username=site.twitter_username %}
+          </li>
+          {% endif %}
         </ul>
       </div>
 
       <div class="footer-col footer-col-3">
-        <ul class="social-media-list">
-          <div>
-            <img src="images/weibo.png" height="18" width="18">
-            <a href="http://weibo.com/271900404" target="_blank"><font size=2>普拉狮普拉狮</font></a>
-          </div>
-          <div>
-            <img src="images/tweet.png" height="18" width="18">
-            <a href="https://twitter.com/HeavyRainSnow" target="_blank"><font size=2>PolarLion</font></a>
-          </div>
-        </ul>
+        <p>{{ site.description }}</p>
       </div>
     </div>
 
