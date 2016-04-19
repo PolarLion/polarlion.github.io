@@ -44,14 +44,10 @@ h3 {
     text-decoration: underline;
 }
 
-a, a:link, a:active {
-    text-decoration: none;
-    /*color: #8C8C8C;*/
-}
 
 a:hover {
-    color: #B3B3B3;
-    text-decoration: underline;
+    color: #A4A4A4;
+    text-decoration: none;
 }
 
 /**
@@ -93,6 +89,55 @@ div.content .highlight {
 	background: #333333;
 }
 
+.icon > svg { 
+    display: inline-block; 
+    width: 30px; 
+    height: 30px; 
+    left:0px;
+    /*margin-left:auto;*/
+    /*margin-right:auto;*/
+    vertical-align: text-top; 
+}
+.icon > svg path { fill: #000000; }
+
+.social-media-list {
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.post-title{
+    color:black;
+    font-weight:bold;
+}
+
+.post-meta {
+    font-size: 14px; 
+    color: #828282;
+}
+
+.post-link { 
+    display: block; 
+    color:  black;
+    font-family: STKaiti;
+    font-weight:bold;
+}
+.location {
+    color:#848484;
+    font-size: 16px;
+    font-family: STKaiti;
+    font-weight:bold;
+}
+
+.link2full {
+    font-size: 19px;
+    color: #585858;
+    font-family: STKaiti;
+    font-weight:bold;
+}
+
+
+
 footer {
     border-top: 1px solid #E6E6E6;
     /*width: 100%;*/
@@ -107,6 +152,10 @@ footer {
 
 footer div#github {
 	text-align: right;
+}
+
+a#github {
+    color: #A4A4A4;
 }
 
 div.right h1 {
@@ -135,34 +184,22 @@ div.right .post ul {
  * Left column aka nav bar formatting
  * ///////////////////////////////////
  */
-div.col-sm-3 {
-        margin-top: 100px;
-        font-size: 11px;
-        color: #666;
-        border-right: 1px;
-        border-color: black;
+.site-header {
+        margin-top: 28px;
+        font-size: 18px;
+        font-family: STKaiti;
+        font-weight:bold; 
+        color: black;
+        position: fixed;
+        text-align: center;
+        margin-left:auto;
+        margin-right:auto;
 }
 
-div.col-sm-3 strong {
-        font-size: 16px;
-        color: #4A4A4A;
-        font-weight: normal;
-        border-right: 1px;
-        border-color: black;
-}
-/*
-div.col-sm-3 div#about {
-        margin-top: 20px;
-		color: #8C8C8C;
-        border-right: 1px;
-        border-color: black;
+.header-contact {
+    margin-top: 10px;
+    text-align:center;
+    color: black;
 }
 
-div.col-sm-3 img#about {
-    -webkit-border-radius: 150px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    border-right: 1px;
-    border-color: black;
-}*/
+

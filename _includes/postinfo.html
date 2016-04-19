@@ -1,0 +1,6 @@
+<p class="post-meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y " }}</time>
+    {% if page.location %}}
+    &nbsp&nbsp发布于&nbsp<span class="location">{{ page.location }}</span></br>
+    {% endif %}
+</p>

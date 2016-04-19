@@ -4,16 +4,19 @@ layout: default
 
 <div id="home">
 
-  <h1 ><font size="6">纸碎</font></h1>
+  <h1 ><font size="12">纸碎</font></h1>
   <!-- <body background="images/狮子.png"> -->
   <ul class="posts">
     {% for post in site.posts %}
       
         <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-        {{ post.excerpt }}<a href="{{ post.url | prepend: site.baseurl }}">查看全文</a>
+        {{ post.excerpt }}
+        <a class="link2full" href="{{ post.url | prepend: site.baseurl }}">查看全文</a>
         <br />
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <span class="post-meta">&nbsp&nbsp发布于{{ post.location }}</span>
+        {% if post.location %}
+        <span class="post-meta">&nbsp&nbsp发布于 <a class="location">{{ post.location || page.location }}</a></span>
+        {% endif %}
       
     {% endfor %}
   </ul>
