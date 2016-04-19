@@ -23,6 +23,7 @@ twitter_username: Polarlion
 github_username:  polarlion
 github: https://github.com/PolarLion/polarlion.github.io
 
+
 safe: true
 # lsi: false
 # pygments: true
@@ -32,6 +33,7 @@ simple_search: http://google.com/search
 markdown: kramdown
 # highlighter: rouge
 excerpt_separator: "\n\n"
+
 
 
 
