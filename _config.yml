@@ -6,70 +6,32 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: 普拉狮是什么狮？
+title: 普
 
 email: polarlion@qq.com
-
-# author :
-#   name : sugeng tigefa
-#   email : tigefa@gmail.com
-#   tumblr: tigefa
-#   flickr: tigefa
-#   github : tigefa4u
-#   repository: tigefa4u.github.io
-#   gittip: tigefa
-#   twitter : tigefa_team
-#   facebook: tigefa.team
-#   feedburner : tigefa4ugithub
-#   linkedin: tigefadotinfo
-#   googleplus: tigefa
-#   pinterest: tigefa
-#   bitbucket: tigefa4u
-#   stackoverflow: tigefa
 
 
 
 description: > # this means to ignore newlines until "baseurl:"
   千山鸟飞绝  万径人踪灭<br />
   孤舟蓑笠翁  独钓寒江雪
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/test" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 weibo_username: 普拉狮普拉狮
 twitter_username: Polarlion
 github_username:  polarlion
+github: https://github.com/PolarLion/polarlion.github.io
 
 safe: true
-lsi: false
+# lsi: false
 # pygments: true
 simple_search: http://google.com/search
 
 # Build settings
 markdown: kramdown
-highlighter: rouge
+# highlighter: rouge
 excerpt_separator: "\n\n"
 
-# Markdown 处理器
-rdiscount:
-  extensions: []
-
-redcarpet:
-  extensions: []
-
-kramdown:
-  auto_ids:       true
-  footnote_nr:    1
-  entity_output:  as_char
-  toc_levels:     1..6
-  smart_quotes:   lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-
-  coderay:
-    coderay_wrap:              div
-    coderay_line_numbers:      inline
-    coderay_line_number_start: 1
-    coderay_tab_width:         4
-    coderay_bold_every:        10
-    coderay_css:               style
 
 
 port: 5000
