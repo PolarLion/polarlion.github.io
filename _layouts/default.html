@@ -1,31 +1,28 @@
+---
+layout: default
+---
 <!DOCTYPE html>
 <html>
-	{% include head.html %}
-    
-    <body>
+{% include head.html %}
 
-		<div class="row">
-			<div class="col-sm-2 col-sm-offset-1">
-				{% include header.html %}
-				<!-- <div id="gotop"></div> -->
-			</div>
+<body>
+  <div class="row">
+    <div class="col-sm-2 col-sm-offset-1">
+      {% include header.html %}
+    </div>
+    <div class="col-sm-6 col-sm-offset-4">
+      {{ content }}
+      <br />
+      {% include simple_footer.html %}
+	<br/>
+	<br/>
 
-			<div class="col-sm-6 col-sm-offset-4">
-				
-				{{ content }}
-				
-				<footer>
-					&copy; {{ site.title }}
-					{% if site.github %} 
-						- <a id="github" href="{{ site.github }}">{{ site.github }}</a>
-					{% endif %}
-				</footer>
-			</div>
-		
-		</div>
-
+    </div>
+  </div>
+  
 <!-- <script type="text/javascript" src="{{site.baseurl}}/js/jquery.js"></script> -->
 <!-- <script type="text/javascript" src="{{site.baseurl}}/js/main.js"></script> -->
+
 </body>
 
 </html>

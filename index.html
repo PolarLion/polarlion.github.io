@@ -5,10 +5,8 @@ layout: default
 <div id="home">
 
   <h1 ><font size="12">纸碎</font></h1>
-  <!-- <body background="images/狮子.png"> -->
   <ul class="posts">
     {% for post in site.posts %}
-      
         <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
         {{ post.excerpt }}
         <a class="link2full" href="{{ post.url | prepend: site.baseurl }}">查看全文</a>
@@ -21,3 +19,5 @@ layout: default
     {% endfor %}
   </ul>
 </div>
+
+
