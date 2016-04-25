@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "关于 mosesserver 的使用"
+title:  "mosesserver 使用方法"
 location: 北理的实验室
 date:   2016-04-18 11:14:00 +0800
 categories: "moses"
@@ -9,7 +9,7 @@ tags: "moses 统计机器翻译"
 
 
 　　无比强大的 moses 开源翻译工具毫无意外地提供了 server 的工作模式，
-然而 mosesserver 的官方文档 [在这里：mosesserver 官方文档][mosesserver-doc] 完全是文字描述，没有代码，没有demo，有点反人类。（文档中确实提到有perl脚本，但是并没有在源代码里面找到T_T，不禁叫人吐槽 moses 的代码和注释质量远远超过文档），总而言之，想搞定它需要自己动手丰衣足食了。以下为使用 mosesserver 的一个简单的 python 实践......
+然而 mosesserver 的官方文档 [在这里：mosesserver 官方文档][mosesserver-doc] 完全是文字描述，没有代码，没有demo，有点反人类。（文档中确实提到有perl脚本，但是并没有在源代码里面找到T_T，不禁叫人吐槽 moses 的代码和注释质量远远超过文档），总而言之，想搞定它需要自己动手丰衣足食了。以下为介绍 mosesserver 使用方法的一个简单的 python 实践......
 
 
 <br /><font color="green">/************************************************** 废话分割线 ***************************************************/</font><br />
