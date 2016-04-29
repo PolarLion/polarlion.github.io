@@ -6,6 +6,9 @@
 
 body {
     color: #424242;
+    letter-spacing:0px;
+    /*font-family:STSong;*/
+    font-size:145%;
 }
 
 @media (min-width: 768px) {
