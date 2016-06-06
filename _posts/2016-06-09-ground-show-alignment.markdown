@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "神经网络机器翻译开源代码 GroundHog ：输出对齐信息（上）"
+title:  "神经网络机器翻译开源代码 GroundHog ：输出对齐信息"
 location: 北理的实验室
-date:   2016-05-17 15:00:00 +0800
+date:   2016-06-09 00:00:00 +0800
 categories: "NMT"
 tags: "神经网络机器翻译 NMT GroundHog Theano"
 ---
