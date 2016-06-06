@@ -270,8 +270,6 @@ class RecurrentLayerWithSearch(Layer):
 
 
 
-
-
 <br /><font color="green">/******************************************  参考文线  *******************************************/</font><br />
 
 1.<a id="bahdanau2014"/>Bahdanau, D., K. Cho & Y. Bengio (2014) Neural machine translation by jointly learning to align and translate. arXiv preprint arXiv:1409.0473.
