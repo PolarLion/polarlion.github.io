@@ -174,7 +174,8 @@ a#github {
         font-family: STKaiti;
         font-weight:bold; 
         color: black;
-        position: fixed;
+        /*position: fixed;*/
+        position: absolute;
         text-align: center;
         margin-left:auto;
         margin-right:auto;
