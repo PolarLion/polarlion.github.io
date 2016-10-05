@@ -13,8 +13,7 @@ email: polarlion@qq.com
 
 
 description: > # this means to ignore newlines until "baseurl:"
-  千山鸟飞绝 万径人踪灭<br />
-  孤舟蓑笠翁 独钓寒江雪
+  千山鸟飞绝 万径人踪灭<br />孤舟蓑笠翁 独钓寒江雪
 # baseurl: "/test" # the subpath of your site, e.g. /blog
 baseurl: ""
 url: "http://yourdomain.com" # the base hostname & protocol for your site
@@ -37,4 +36,4 @@ excerpt_separator: "\n\n"
 
 
 
-# port: 5000
+port: 5000

@@ -66,8 +66,10 @@ div#container {
 
 
 div.content pre {
+    /*margin-left:45px;*/
+    /*padding-left: 45px;*/
     background: #333333;
-    padding: 5px;
+    /*padding: 5px;*/
     color: #FFF;
     overflow-x: auto;
     font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
@@ -95,19 +97,51 @@ div.content .highlight {
     margin-right:auto;
 }
 
+
+:root {
+    --main-padding-left: 60px;
+  /*--main-color: #06c;*/
+  /*--accent-color: #006;*/
+}
+
 .post-title{
+    padding-left: var(--main-padding-left);
     color:black;
+    font-family: STKaiti;
     font-weight:bold;
 }
 
 .post-meta {
-    font-size: 14px; 
+    padding-left: var(--main-padding-left);
+    font-size: 12px; 
     color: #828282;
 }
 
+
+.catalogue {
+    padding-left: var(--main-padding-left);
+}
+
+.blogroll {
+    padding-left: var(--main-padding-left);
+}
+
+.post {
+    padding-left: var(--main-padding-left);
+}
+
 .post-link { 
+    padding-left: var(--main-padding-left);
     display: block; 
     color:  black;
+    font-family: STKaiti;
+    font-weight:bold;
+}
+
+.link2full {
+    padding-left: var(--main-padding-left);
+    font-size: 14px;
+    color: #585858;
     font-family: STKaiti;
     font-weight:bold;
 }
@@ -119,11 +153,12 @@ div.content .highlight {
     font-weight:bold;
 }
 
-.link2full {
-    font-size: 19px;
-    color: #585858;
-    font-family: STKaiti;
-    font-weight:bold;
+.well-my {
+    /*margin-top:20px;*/
+    margin-left:50px;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    /*padding-left: 50px;*/
 }
 
 
@@ -147,6 +182,21 @@ a#github {
     color: #A4A4A4;
 }
 
+.navbar-black {
+    background-color: #1C1C1C;
+}
+
+
+.navbar-default > .active{
+    color: #000;
+    background: #d65c14;
+ }
+ .navbar-default .navbar-nav > .active > a, 
+ .navbar-default .navbar-nav > .active > a:hover, 
+ .navbar-default .navbar-nav > .active > a:focus {
+      color: #000;
+      background: #088A85;
+ }
 
 
 .tags {
@@ -168,21 +218,21 @@ a#github {
  * Left column aka nav bar formatting
  * ///////////////////////////////////
  */
-.site-header {
-        margin-top: 35px;
+.site-asider {
+        /*margin-top: 35px;*/
         font-size: 18px;
         font-family: STKaiti;
         font-weight:bold; 
         color: black;
         /*position: fixed;*/
-        position: fixed;
+        /*position: fixed;*/
         text-align: center;
-        margin-left:auto;
-        margin-right:auto;
+        /*margin-left:auto;*/
+        /*margin-right:auto;*/
 }
 
-.header-contact {
-    margin-top: 10px;
+.asider-contact {
+    /*margin-top: 10px;*/
     text-align:center;
     color: black;
 }

@@ -3,19 +3,21 @@ layout: default
 ---
 <!-- <article class="post" itemscope itemtype="http://schema.org/BlogPosting"> -->
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    {% include postinfo.html %}
-  </header>
+<header class="post-header">
+	<h3 class="post-title" itemprop="name headline">{{ page.title }}</h3>
+	{% include postinfo.html %}
+</header>
 
 
 <div class="content">
-  <div class="post">{{ content }}</div>
+  <div class="post">
+  	{{ content }}
+  </div>
 </div>
 
 <br /><br /><br />
+<a href="#top" target="_self">返回顶部</a>
 <br /><br /><br />
-
 
 <!-- 多说评论框 start -->
 <div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" data-url="{{page.url}}"></div>

@@ -3,21 +3,20 @@ layout: default
 ---
 
 <div id="home">
-
-  <h1 ><font size="12">纸碎</font></h1>
-  <ul class="posts">
     {% for post in site.posts %}
-        <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-        {{ post.excerpt }}
+        <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+        <!-- <div class="post">{{ post.excerpt }}</div> -->
         <a class="link2full" href="{{ post.url | prepend: site.baseurl }}">查看全文</a>
         <br />
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
         {% if post.location %}
-        <span class="post-meta">&nbsp&nbsp发布于 <a class="location">{{ post.location || page.location }}</a></span>
+        <span><font size="2">&nbsp&nbsp发布于 </font><a class="location">{{ post.location || page.location }}</a></span>
         {% endif %}
-      
     {% endfor %}
-  </ul>
 </div>
+
+
+
+
 
 
