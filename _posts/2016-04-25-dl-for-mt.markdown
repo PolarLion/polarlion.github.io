@@ -1,5 +1,6 @@
 ---
 layout: post
+type: "tech"
 title:  "神经网络机器翻译（Neural Machine Translation）入门不完全指南"
 location: 东北老家
 date:   2016-04-29 15:00:00 +0800

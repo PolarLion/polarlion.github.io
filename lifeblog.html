@@ -4,7 +4,7 @@ layout: default
 
 <div id="home">
     {% for post in site.posts %}
-    {% if post.type == "tech" %}
+    {% if post.type == "life" %}
         <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
         <!-- <div class="post">{{ post.excerpt }}</div> -->
         <a class="link2full" href="{{ post.url | prepend: site.baseurl }}">查看全文</a>
@@ -16,9 +16,3 @@ layout: default
         {% endif %}
     {% endfor %}
 </div>
-
-
-
-
-
-

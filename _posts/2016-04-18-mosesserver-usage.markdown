@@ -1,5 +1,6 @@
 ---
 layout: post
+type: "tech"
 title:  "mosesserver 使用方法"
 location: 北理的实验室
 date:   2016-04-18 11:14:00 +0800
