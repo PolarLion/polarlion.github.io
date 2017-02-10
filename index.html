@@ -4,15 +4,27 @@ layout: default
 
 <div id="home">
     {% for post in site.posts %}
-    {% if post.type == "tech" %}
-        <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-        <!-- <div class="post">{{ post.excerpt }}</div> -->
-        <a class="link2full" href="{{ post.url | prepend: site.baseurl }}">查看全文</a>
-        <br />
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        {% if post.location %}
-        <span><font size="2">&nbsp&nbsp发布于 </font><a class="location">{{ post.location || page.location }}</a></span>
+        {% if post.type == "tech" and post.top == "true" %}
+            <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><font color="#01A9DB">[置顶] </font>{{ post.title }}</a></h3>
+            <!-- <div class="post">{{ post.excerpt }}</div> -->
+            <a class="link2full" href="{{ post.url | prepend: site.baseurl }}">查看全文</a>
+            <br />
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            {% if post.location %}
+            <span><font size="2">&nbsp&nbsp发布于 </font><a class="location">{{ post.location || page.location }}</a></span>
+            {% endif %}
         {% endif %}
+    {% endfor %}
+    {% for post in site.posts %}
+        {% if post.type == "tech" and post.top != "true" %}
+            <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+            <!-- <div class="post">{{ post.excerpt }}</div> -->
+            <a class="link2full" href="{{ post.url | prepend: site.baseurl }}">查看全文</a>
+            <br />
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            {% if post.location %}
+            <span><font size="2">&nbsp&nbsp发布于 </font><a class="location">{{ post.location || page.location }}</a></span>
+            {% endif %}
         {% endif %}
     {% endfor %}
 </div>
