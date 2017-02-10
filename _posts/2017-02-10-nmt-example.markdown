@@ -5,7 +5,7 @@ title:  "结合注意力机制的神经机器翻译实例<br>An Example for Atte
 location: 东北老家
 tag: "神经网络机器翻译 NMT"
 categories: "NMT"
-date:   2017-02-10 08:45:00 +0800
+date:   2017-02-10 15:10:00 +0800
 ---
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
