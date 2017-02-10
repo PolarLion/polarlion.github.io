@@ -2,11 +2,11 @@
 layout: post
 top: "true"
 type: "tech"
-title:  "神经机器翻译论文汇总<br>Papers on Neural Machine Translation"
+title:  "[持续更新] 神经机器翻译论文汇总<br>Papers on Neural Machine Translation"
 location: 东北老家
 tag: "神经网络机器翻译 NMT"
 categories: "NMT"
-date: 2017-02-10 15:30:00 +0800
+date: 2017-02-10 16:30:00 +0800
 ---
 
 博主在这里尽可能地整理些神经机器翻译相关的重要论文，大概按照下面的条目分类，不同类别中有互相覆盖的~
