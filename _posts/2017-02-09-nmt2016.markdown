@@ -13,57 +13,72 @@ date:   2017-02-09 18:45:00 +0800
 
 截至**2016年底**，神经机器翻译技术已经应用在 **Google**、**百度** 等公司的在线翻译系统中。下面将从**训练目标**、**外部记忆单元**、**词切片和字符级别翻译**、**多语言低资源翻译**四个方面对2016年神经机器翻译的主要进展进行简要介绍。
 
-###**训练目标**
+<h3>训练目标</h3>
 神经机器翻译模型的训练目标对模型在翻译任务中的表现起着至关重要的作用。目前，使用较多的目标函数是极大似然估计，这种目标函数是定义在词级别上的，不包含上下文的信息，这对句子或篇章级别的机器翻译任务来说并不十分适合。为解决此类问题，可以将机器翻译任务的评价指标融入训练过程，提升模型训练与测试评价标准的一致性（<a href="#shen2016">Shen et al., 2016</a>; <a href="#ranzato2016">Ranzato et al., 2016</a>）；另一方面，神经机器翻译经常出现解码时丢失源语言信息的情况，针对此问题，可以将“还原源语言”作为训练目标融入训练过程（<a href="#cheng2016">Cheng et al. 2016</a>; <a href="#tu2016">Tu et al., 2016</a>），减少翻译时的源语言信息丢失（如图12）。
 
+<figure align="center">
 <img  src="{{ site.baseurl }}/images/2016nmtadvantage/xunlianmubiao2016.jpg" align="middle"  width="635" height="336"/>
+<figcaption><b>图 1 将“还原源语言信息”引入训练目标。b为两种引入方法。</b></figcaption>
+</figure>
+<br />
 
-#####**图 1 将“还原源语言信息”引入训练目标。b为两种引入方法。**
-
-###**外部记忆单元**
+<h3>外部记忆单元</h3>
 RNN结构的网络采用固定长度的向量表示历史信息，对于不同长度的序列，长度越长则越容易损失更多的信息。借鉴神经图灵机（Neural Turing Machine，<a href="#graves2014">Graves et al., 2014</a>）的方法，为神经机器翻译中的RNN网络结构提供额外的记忆单元（如图13），有效缓解了RNN长距离信息衰减问题（<a href="#wang2016">Wang et al., 2016</a>; <a href="#meng2016">Meng et al., 2016</a>）。
+<figure align="center">
+<img  src="{{ site.baseurl }}/images/2016nmtadvantage/waibujiyidanyuan.jpg" align="middle"  width="249px" height="170px" />  
+<figcaption><b>图 2 外部记忆单元</b></figcaption>
+</figure>
+<br />
 
-<img  src="{{ site.baseurl }}/images/2016nmtadvantage/waibujiyidanyuan.jpg" align="middle"  width="249px" height="170px"/>
-
-#####**图 2 外部记忆单元**
-
-###**词切片和字符级别翻译**
+<h3>词切片和字符级别翻译</h3>
 神经机器翻译采用固定规模的词汇表面临着几个问题（1）解码时庞大的搜索空间影响效率；（2）“unk”和未登录词问题；（3）无法有效利用词形或组词的规则提供的信息，包括同根词或变形（如英语中的时态、单复数的变化）和新词，例如：
-
+<figure align="center">
 <img  src="{{ site.baseurl }}/images/2016nmtadvantage/ciqiepianhezifujibiefanyi.jpg" align="middle"  width="498" height="140"/>
+</figure>
+<br />
 
 上述英文单词中，从单词本身的词形很容易推断出词性或语义信息。
 词切片或字符级别的翻译不再使用单词作为构成词汇表的元素，而是采用比单词更细粒度的表示单元，以字符或词切片为例：
-
+<figure align="center">
 <img  src="{{ site.baseurl }}/images/2016nmtadvantage/ciqiepianhezifujibiefanyi2.jpg" align="middle"  width="249" height="135"/>
-	
+</figure>
+<br />
+
 这样可以减少词汇表规模、降低未登录词和“unk”的数目，并且将字形相近的词也关联起来。如果完全采用字符替代单词，则可以完全消除“unk”问题，且词汇表规模可以缩小到10^2~10^3。
 在实践上，<a href="#luong2016">Luong et al., 2016</a> 提出了词语-字符混合的神经翻译模型；<a href="#sennrich2016">Sennrich et al., 2016</a> 提出利用字节对编码 （Byte Pair Encoding）建立基于子词（subword）的神经机器翻译模型；<a href="#chung2016">Chung et al., 2016</a> 提出基于字符的解码器；<a href="#lee2016">Lee et al., 2016</a> 提出一种完全基于字符的神经机器翻译模型，在编码端和解码端均使用字符作为输入、输出，并且尝试了基于字符的多语言翻译；Google的神经机器翻译系统（<a href="#wu2016">Wu et al., 2016</a>）采用词切片（wordpiece）作为神经机器翻译的输入和输出，在不降低翻译质量的情况下有效缩小词表长度。
 上述方法采用比单词更细粒度的表示作为词汇表中的特征，负面的影响是增加了输入输出序列的长度：
-
+<figure align="center">
 <img  src="{{ site.baseurl }}/images/2016nmtadvantage/ciqiepianhezifujibiefanyi3.jpg" align="middle"  width="691" height="77"/>
+</figure>
+<br />
 
 序列长度的增加对神经机器翻译的效果会有不利的影响，这是字符级别翻译面临的主要问题。
 
-###**多语言低资源翻译**
+<h3>多语言低资源翻译</h3>
 神经机器翻译中，解码器依据源语言的抽象表示进行解码，无论是编码器直接编码得到的上下文向量还是结合注意力机制之后的上下文向量均属于这种抽象表示，这种抽象表示为多语言低资源神经机器翻译提供了可能。传统的机器翻译方法，每个翻译系统只能实现在某一种语言对上特定方向的翻译，如果引入其他语言或者翻译方向，就要重新构建新的翻译系统；而多语言神经翻译则尝试实现同一模型完成多语言的翻译任务（如图14）。
-
+<figure align="center">
 <img  src="{{ site.baseurl }}/images/2016nmtadvantage/duoyuyandiziyuanfanyi.jpg" align="middle"  width="806" height="285"/>
+<figcaption><b>图 3（a）传统多语言对翻译；（b）多语言神经机器翻译。</b></figcaption>
+</figure>
+<br />
 
-#####**图 3（a）传统多语言对翻译；（b）多语言神经机器翻译。**
 另一方面，若图14中的中文和日文平行语料库稀缺，则无法利用统计机器翻译构建出中文到日文的直译系统，要实现中文到日文的机器翻译则需要以英文为枢轴语言（pivot language）完成：
- 
-<img  src="{{ site.baseurl }}/images/2016nmtadvantage/duoyuyandiziyuanfanyi2.jpg" align="middle"  width="770" height="75"/>
-
-#####**图 4 以英文为枢轴语言实现中文到日文的翻译。**
+<figure align="center">
+<img  src="{{ site.baseurl }}/images/2016nmtadvantage/duoyuyandiziyuanfanyi2.jpg" align="middle"  width="795" height="90"/>
+<figcaption><b>图 4 以英文为枢轴语言实现中文到日文的翻译。</b></figcaption>
+</figure>
+<br />
 
 这种方法的问题在于：系统1产生的误差会传递到系统2并被放大，其准确率远低于利用大规模单一语言对训练的模型。而多语言神经机器翻译不但摆脱了枢轴语言，还可以利用不同语言之间的抽象表示的关联提升资源稀缺语言的翻译效果。  
 多语言神经机器翻译的工作最初由 <a href="#firat2016a">Firat et al., 2016a</a> 提出，该工作实现了不同语言的编码器和解码器之间共享同一个注意力模型的方法，并对稀缺资源的翻译提供了帮助；类似地，<a href="#zoph2016">Zoph et al., 2016</a> 将在资源丰富语言平行语料库训练的模型参数迁移到资源匮乏语言翻译模型的训练过程中，帮助提升稀缺资源神经机器翻译效果；<a href="#firat2016b">Firat et al., 2016b</a> 对 <a href="#firat2016a">Firat et al., 2016a</a> 进行了改进，在源语言端将多语言的编码器融合，使其实现单一模型的多语到单语的多方向翻译 **Google** 公司的 <a href="#johson2016">Johson et al., 2016</a> 实现了严格意义上的多语言神经机器翻译系统。该工作实现了多语言共享同一词汇表的、多语言到多语言的神经机器翻译，且在0资源的翻译上取得可观效果，该工作还指出：多语言共享的注意力模型的输出可以看作抽象语义层面的“中间语言”，作为该多语言翻译神经翻译系统的理论解释。
- 
-<img  src="{{ site.baseurl }}/images/2016nmtadvantage/duoyuyandiziyuanfanyi3.jpg" align="middle"  width="679" height="132"/>
+
+<figure align="center">
+<img  src="{{ site.baseurl }}/images/2016nmtadvantage/duoyuyandiziyuanfanyi3.jpg" align="middle"  width="722" height="156"/>
+<figcaption><b>图 5 谷歌多语言翻译系统，通过在源语言端标记目标语言种类区分目标语言，如“<2en>”为翻译到英文；“<2zh>”为翻译到中文。</b></figcaption>
+</figure>
 
 
-#####**图 5 谷歌多语言翻译系统，通过在源语言端标记目标语言种类区分目标语言，如“<2en>”为翻译到英文；“<2zh>”为翻译到中文。**
+
 
 
 
