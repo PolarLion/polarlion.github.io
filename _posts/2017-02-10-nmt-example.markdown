@@ -7,7 +7,7 @@ tag: "神经网络机器翻译 NMT"
 categories: "NMT"
 date:   2017-02-10 15:10:00 +0800
 ---
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 
 本文将结合实例详细介绍结合注意力的神经机器翻译过程。以 <a href="#bahdanau2014">Bahdanau et al., 2014</a> 的工作为基础，并对此进行了简化（如将原文中使用的GRU替换成普通的RNN单元）以方便讲解，该工作同时公布了项目的**源代码**（<a href="https://github.com/lisa-groundhog/GroundHog/tree/master/experiments/nmt">https://github.com/lisa-groundhog/GroundHog/tree/master/experiments/nmt</a>），感兴趣的读者可以下载阅读并尝试运行。  
 接下来，我们希望将下面的中文句子翻译成英文句子:  
@@ -183,3 +183,6 @@ $$
 
 
 1.<a id="bahdanau2014" /> Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio. 2015. Neural Machine Translation by Jointly Learning to Align and Translate. In Proceedings of ICLR.  
+
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
