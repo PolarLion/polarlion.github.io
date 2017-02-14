@@ -156,12 +156,10 @@ $$
 
 其中，\\(V_a∈R^{n^\prime}\\)，\\(W_a∈R^{n^\prime×n}\\)，\\(U_a∈R^{n^\prime×2n}\\)。从公式7.54可以看出，上下文向量c_i  由编码器各个隐层状态 \\(h=\\{h_1,…,h_{N_x}\\}\\) 加权求和得到。其中权重 \\(α_{ij}\\)  可理解为解码到第 \\(i\\) 个目标语言单词时，第 \\(j\\) 位置的源语言隐层状态对其的贡献值；亦可理解为目标语言中第 \\(i\\) 个目标语言单词的注意力或对齐到源语言第 \\(j\\) 位置的程度。若将整个解码过程中的 \\(α_{ij}\\) 输出，可以直观地看到上述的注意力（或对齐）信息。图4将其以灰度矩阵的形式表现出来，其中亮度越高的部分代表权重 \\(α_{tj}\\)  的值越高。
 <figure align="center">
-<img src="{{ site.baseurl }}/images/20160210nmtexample/8.jpg" align="middle"  width="326" height="343" align="center"/>  
-<figcaption align="center"><b>图 4（占位）</b></figcaption>
+<img src="{{ site.baseurl }}/images/20160210nmtexample/8.jpg" align="middle"  width="499" height="419" align="center"/>  
+<figcaption align="center"><b>图 4 注意力矩阵</b></figcaption>
 </figure>
 <br />
-
-<h1>未完待续</h1>
 <br />
 <br />
 
@@ -170,11 +168,10 @@ $$
 
 在统计机器翻译中通常使用柱搜索来优化解码过程。由于本节介绍的神经机器翻译系统的解码过程是逐词输出的，且不考虑覆盖问题，故该搜索过程相对于统计机器翻译更为简化。
 假设柱长度为3，即每次只保留3个搜索路径，且解码器每次需要输出概率最高的3个目标语言单词作为候选。
-
-<h1>未完待续</h1>
-
-
-
+<figure align="center">
+<img src="{{ site.baseurl }}/images/20160210nmtexample/9.jpg" align="middle"  width="555" height="324" align="center"/>  
+<figcaption align="center"><b>图 5 柱搜索的搜索过程示意图。红色连线部分为最终的得分最高路径。X标注了被舍弃的路径。</b></figcaption>
+</figure>
 <br />
 <br />
 <br />
