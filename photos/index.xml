@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Photos on 史学文</title>
+    <link>https://example.com/photos/</link>
+    <description>Recent content in Photos on 史学文</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Dec 2023 20:46:49 -0600</lastBuildDate><atom:link href="https://example.com/photos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cats in Dongbei University of Finance and Economics</title>
+      <link>https://example.com/photos/cats/</link>
+      <pubDate>Sat, 02 Dec 2023 20:46:49 -0600</pubDate>
+      
+      <guid>https://example.com/photos/cats/</guid>
+      <description> Chinese Li Hua Chinese Li Hua Xiao Bai Chinese Li Hua Chinese Li Hua Chinese Li Hua Chinese Li Hua </description>
+    </item>
+    
+  </channel>
+</rss>

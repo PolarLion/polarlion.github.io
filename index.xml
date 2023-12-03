@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 26 Jun 2017 18:27:58 +0100</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Cats in Dongbei University of Finance and Economics</title>
+      <link>https://example.com/photos/cats/</link>
+      <pubDate>Sat, 02 Dec 2023 20:46:49 -0600</pubDate>
+      
+      <guid>https://example.com/photos/cats/</guid>
+      <description> Chinese Li Hua Chinese Li Hua Xiao Bai Chinese Li Hua Chinese Li Hua Chinese Li Hua Chinese Li Hua </description>
+    </item>
+    
+    <item>
       <title>Heading Link Test</title>
       <link>https://example.com/post-bak/heading-link-test/</link>
       <pubDate>Mon, 28 Nov 2022 20:04:19 -0600</pubDate>
@@ -129,7 +138,7 @@ https://github.com/russross/blackfriday https://github.com/alecthomas/chroma htt
       <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://example.com/publications/</guid>
-      <description>Dependency-Aware Neural Topic Model Heyan Huang, Yi-Kun Tang, Xuewen Shi, Xian-Ling Mao. Information Processing &amp;amp; Management. 2024 Improving Word-level Diversity in Neural Machine Translation by Controlling the Effects of Word Frequency Xuewen Shi, Ping Jian, Yi-Kun Tang, Heyan Huang. Proceedings of the 22nd Chinese National Conference on Computational Linguistics. 2023 Approximating to the Real Translation Quality for Neural Machine Translation via Causal Motivated Methods Xuewen Shi, Ping Jian, Yi-Kun Tang, Heyan Huang.</description>
+      <description>Dependency-Aware Neural Topic Model Heyan Huang, Yi-Kun Tang, Xuewen Shi, Xian-Ling Mao. Information Processing &amp;amp; Management. 2024 Improving Word-level Diversity in Neural Machine Translation by Controlling the Effects of Word Frequency Xuewen Shi, Ping Jian, Yi-Kun Tang, Heyan Huang. Proceedings of the 22nd Chinese National Conference on Computational Linguistics. 2023 Approximating to the Real Translation Quality for Neural Machine Translation via Causal Motivated Methods Xuewen Shi, Heyan Huang, Ping Jian, Yi-Kun Tang.</description>
     </item>
     
     <item>
@@ -138,7 +147,7 @@ https://github.com/russross/blackfriday https://github.com/alecthomas/chroma htt
       <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://example.com/publications-zh/</guid>
-      <description>Dependency-Aware Neural Topic Model Heyan Huang, Yi-Kun Tang, Xuewen Shi, Xian-Ling Mao. Information Processing &amp;amp; Management. 2024 基于词频效应控制的神经机器翻译用词多样性增强方法 史学文, 鉴萍, 唐翼琨, 黄河燕. 第22届中国计算语言学大会 (CCL 2023). 2023 Approximating to the Real Translation Quality for Neural Machine Translation via Causal Motivated Methods Xuewen Shi, Ping Jian, Yi-Kun Tang, Heyan Huang. ACM Transactions on Asian and Low-Resource Language Information Processing. 2023 Neural Variational Gaussian Mixture Topic Model Yi-Kun Tang, Heyan Huang, Xuewen Shi, Xian-Ling Mao.</description>
+      <description>Dependency-Aware Neural Topic Model Heyan Huang, Yi-Kun Tang, Xuewen Shi, Xian-Ling Mao. Information Processing &amp;amp; Management. 2024 基于词频效应控制的神经机器翻译用词多样性增强方法 史学文, 鉴萍, 唐翼琨, 黄河燕. 第22届中国计算语言学大会 (CCL 2023). 2023 Approximating to the Real Translation Quality for Neural Machine Translation via Causal Motivated Methods Xuewen Shi, Heyan Huang, Ping Jian, Yi-Kun Tang. ACM Transactions on Asian and Low-Resource Language Information Processing. 2023 Neural Variational Gaussian Mixture Topic Model Yi-Kun Tang, Heyan Huang, Xuewen Shi, Xian-Ling Mao.</description>
     </item>
     
     <item>

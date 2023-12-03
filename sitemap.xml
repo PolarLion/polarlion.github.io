@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://example.com/tags/cat/</loc>
+    <lastmod>2023-12-02T20:46:49-06:00</lastmod>
+  </url><url>
+    <loc>https://example.com/photos/cats/</loc>
+    <lastmod>2023-12-02T20:46:49-06:00</lastmod>
+  </url><url>
+    <loc>https://example.com/photos/</loc>
+    <lastmod>2023-12-02T20:46:49-06:00</lastmod>
+  </url><url>
+    <loc>https://example.com/tags/</loc>
+    <lastmod>2023-12-02T20:46:49-06:00</lastmod>
+  </url><url>
     <loc>https://example.com/post-bak/</loc>
     <lastmod>2022-11-28T20:04:19-06:00</lastmod>
   </url><url>
@@ -12,9 +24,6 @@
     <lastmod>2020-08-04T21:05:05-05:00</lastmod>
   </url><url>
     <loc>https://example.com/tags/issue/</loc>
-    <lastmod>2020-08-04T21:05:05-05:00</lastmod>
-  </url><url>
-    <loc>https://example.com/tags/</loc>
     <lastmod>2020-08-04T21:05:05-05:00</lastmod>
   </url><url>
     <loc>https://example.com/post-bak/multiple-expandable-test/</loc>
